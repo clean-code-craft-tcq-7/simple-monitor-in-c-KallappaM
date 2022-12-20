@@ -1,3 +1,6 @@
+USED : Extension 1: Early Warning 
+USED : Extension 2: Support a language in addition to English
+
 # Programming Paradigms
 
 Electric Vehicles have BMS - Battery Management Systems
