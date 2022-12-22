@@ -27,7 +27,7 @@ void SelectLanguageandWarnigMessage(Select_Language Language)
 }
 
 /*This function returns warning message*/
-const char ReturnWarningMessage(int soc)
+const char* ReturnWarningMessage(int soc)
 {
    return Store_WarningMessage[(BatteryHelathMonitor(soc))];
 }
