@@ -41,14 +41,16 @@ int Check_ChargeRate(float chargeRate)
 
 int main()
 {
+  const char* rturnmessage;
   assert(batteryIsOk(25, 70, 0.7));
   assert(!batteryIsOk(50, 85, 0));
   assert(batteryIsOk(44, 79, 0.7));
   assert(!batteryIsOk(46, 81, 0.8));
   assert(!batteryIsOk(0, 0, 0.7));
   SelectLanguageandWarnigMessage(DEFAULT);
-  //assert(ReturnWarningMessage(13) == "LOW_SOC_BREACH");
-  printf("%s",ReturnWarningMessage(13));
+  rturnmessage = ReturnWarningMessage(13);
+  assert(rturnmessage == "LOW_SOC_BREACH");
+  //printf("%s",ReturnWarningMessage(13));
   SelectLanguageandWarnigMessage(GERMAN);
   printf("%s",ReturnWarningMessage(77));
   //assert(ReturnWarningMessage(77) == "HIGH_SOC_WARNUNG");
