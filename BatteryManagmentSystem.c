@@ -12,20 +12,7 @@
 #define SOCMAX 80
 #define CHARGERATEMAX 0.8
 
-const char* Store_WarningMessage[MESSAGE_MAX];
 const char* PreWarningMessageTable[Warning_max] = {"Approaching_discharge","Approaching_charge_peak"};
-const char* WarningMessageTable[MAX_LANG][MESSAGE_MAX] = {
-		{/*Language : DEFAULT */
-			"LOW_SOC_BREACH","LOW_SOC_WARNING","SOC_NORMAL","HIGH_SOC_WARNING","HIGH_SOC_BREACH","SOC_UNDEFINED"},
-		{/*Language : ENGLISH */
-			"LOW_SOC_BREACH","LOW_SOC_WARNING","SOC_NORMAL","HIGH_SOC_WARNING","HIGH_SOC_BREACH","SOC_UNDEFINED"},
-		{/*Language : GERMAN */
-			"LOW_SOC_BREACH","LOW_SOC_WARNUNG","SOC_NORMAL","HIGH_SOC_WARNUNG","HIGH_SOC_BREACH","SOC_UNDEFINED"},
-		{ /*Language : CHINA */
-			"L_S_BREACHEN","L_S_WARN!!","NORMAL","H_S_WARN!!","H_S_BREACHEN","UNDEFINED"}
-		
-	};
-
 
 /*Function Delceration for BMS*/
 int Check_ChargeRate(float chargeRate);
@@ -50,17 +37,6 @@ int Check_ChargeRate(float chargeRate)
    return 0;
    else
    return 1;
-}
-
-void SelectLanguageandWarnigMessage(Select_Language Language)
-{   
-   if(Language < MAX_LANG)
-   {
-      for(int i =0;i<MESSAGE_MAX;i++)
-      {
-	Store_WarningMessage[i] = WarningMessageTable[Language][i];
-      }
-    } 
 }
 
 int main()
