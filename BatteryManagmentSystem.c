@@ -48,7 +48,7 @@ int main()
   assert(!batteryIsOk(0, 0, 0.7));
   SelectLanguageandWarnigMessage(DEFAULT);
   //assert(ReturnWarningMessage(13) == "LOW_SOC_BREACH");
-  printf("%s",ReturnWarningMessage(13));
+  //printf("%s",ReturnWarningMessage(13));
   SelectLanguageandWarnigMessage(GERMAN);
   //assert(ReturnWarningMessage(77) == "HIGH_SOC_WARNUNG");
   assert(PreWarningMessageTable[PreWarningIndicatorMessage(23,SOCMIN,SOCMAX)] == "Approaching_discharge"); /* 5% of 80 is 4 , [20-24],[76-80] */
