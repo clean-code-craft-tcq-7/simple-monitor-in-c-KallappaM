@@ -50,7 +50,7 @@ int main()
   SelectLanguageandWarnigMessage(DEFAULT);
   rturnmessage = ReturnWarningMessage(13);
   //assert(rturnmessage == "LOW_SOC_BREACH");
-  //printf("%s\n",rturnmessage);
+  printf("%s\n",rturnmessage);
   SelectLanguageandWarnigMessage(GERMAN);
   printf("%s",ReturnWarningMessage(77));
   //assert(ReturnWarningMessage(77) == "HIGH_SOC_WARNUNG");
