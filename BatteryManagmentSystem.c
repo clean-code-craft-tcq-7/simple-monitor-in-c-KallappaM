@@ -49,7 +49,7 @@ int main()
   assert(!batteryIsOk(0, 0, 0.7));
   SelectLanguageandWarnigMessage(DEFAULT);
   rturnmessage = ReturnWarningMessage(13);
-  assert(rturnmessage == "LOW_SOC_BREACH");
+  assert(rturnmessage == 'LOW_SOC_BREACH');
   //printf("%s",ReturnWarningMessage(13));
   SelectLanguageandWarnigMessage(GERMAN);
   printf("%s",ReturnWarningMessage(77));
