@@ -29,4 +29,4 @@ typedef enum {
 
 void SelectLanguageandWarnigMessage(Select_Language Language);
 WarningRanges BatteryHelathMonitor(int soc);
-const char ReturnWarningMessage(int soc);
+const char* ReturnWarningMessage(int soc);
